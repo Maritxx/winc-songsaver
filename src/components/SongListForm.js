@@ -34,12 +34,14 @@ function SongListForm() {
                 name="songName"
                 value={inputs.songName}
                 onChange={handleChange}
+                placeholder="Name"
             />
 
             <input 
                 name="songArtist"
                 value={inputs.songArtist}
                 onChange={handleChange}
+                placeholder="Artist"
             />
 
             <select 

@@ -10,7 +10,7 @@ const addSong = (songObject) => {
 const removeSong = (key) => {
     return {
         type: REMOVE_SONG,
-        key
+        payload: key
     }
 }
 

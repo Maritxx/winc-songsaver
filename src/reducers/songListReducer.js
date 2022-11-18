@@ -13,8 +13,11 @@ export const songListReducer = (state = initialState, action) => {
             };
 
         case REMOVE_SONG:
+            const filteredArray = state.songs.filter((song) => {
+                return song.songId !== action.payload
+            })
             return {
-
+                songs: filteredArray
             };
 
         default:
