@@ -1,9 +1,8 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { addSong } from "../actions/songListActions"
 
 function SongListForm() {
-    const songs = useSelector(state => state.songs);
     const dispatch = useDispatch();
     const [inputs, setInputs] = useState({
         songName: "",
@@ -21,6 +20,12 @@ function SongListForm() {
     function handleSubmit(event) {
         event.preventDefault();
         dispatch(addSong(inputs));
+        setInputs({
+            songName: "",
+            songArtist: "",
+            songGenre: "",
+            songRating: ""
+        });
     }
 
     return (
