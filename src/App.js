@@ -1,11 +1,9 @@
+import SongListOverview from "./components/SongListOverview";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello World
-        </p>
-      </header>
+    <div className="app">
+        <SongListOverview />
     </div>
   );
 }

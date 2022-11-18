@@ -1,9 +1,9 @@
 import { ADD_SONG, REMOVE_SONG } from "../actionTypes/actionTypes";
 
-const addSong = (data) => {
+const addSong = (songObject) => {
     return {
         type: ADD_SONG,
-        data
+        payload: songObject 
     };
 };
 
