@@ -9,7 +9,8 @@ export const songListReducer = (state = initialState, action) => {
         case ADD_SONG:
             const newSongObject = {...action.payload, songId: state.songs.length + 1}
             return {
-               songs: [...state.songs, newSongObject]
+                ...state,
+                songs: [...state.songs, newSongObject]
             };
 
         case REMOVE_SONG:
@@ -17,6 +18,7 @@ export const songListReducer = (state = initialState, action) => {
                 return song.songId !== action.payload
             })
             return {
+                ...state,
                 songs: filteredArray
             };
 
