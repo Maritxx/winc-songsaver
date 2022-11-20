@@ -4,6 +4,7 @@ import { removeSong } from "../actions/songListActions"
 function SongListDisplay() {
     const songs = useSelector(state => state.songs);
     const dispatch = useDispatch();
+    console.log(songs)
 
     function handleRemove(key) {
         dispatch(removeSong(key));
