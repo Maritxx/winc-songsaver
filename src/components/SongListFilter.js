@@ -1,19 +1,21 @@
 import { useDispatch, useSelector } from "react-redux";
+import { setFilter } from "../actions/songFilterActions";
 
 function SongListFilter() {
-    const genreFilter = useSelector(state => state.genreFilter);
+    const filter = useSelector(state => state.filter);
     const dispatch = useDispatch();
 
-    function handleSelect() {
-        
+    function handleSelect(event) {
+        dispatch(setFilter(event.target.value));
     }
 
     return (
         <select
             name="songFilter"
-            value={genreFilter}
+            value={filter}
             onChange={handleSelect}
         >
+            <option value="">No filter</option>
             <option value="pop">Pop</option>
             <option value="rock">Rock</option>
             <option value="rap">Rap</option>
@@ -26,3 +28,5 @@ function SongListFilter() {
         </select>
     )
 }
+
+export default SongListFilter;
