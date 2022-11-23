@@ -1,8 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*General Styling*/
+.twelveHundred {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
 }
+
+
+/*Font Styling*/
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/*SongListForm*/
+.song-form__container {
+    background-color: #fc553c;
+    border: 2px solid #bd3943;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.song-form__container input, .song-form__container select {
+    flex: 0 1 22%;
+}
+
+.song-form__container button {
+    border: 2px solid #bd3943;
+    background-color: #bc3943;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+
+/*SongListFilter*/
+.song-filter__container {
+    padding: 10px;
+    border: 2px solid #bd3943;
+    background-color: #f67264;
+    border-top: 0px;
+
+}
+
+
+/*SongListDisplay*/
+.song-display__container {
+    width: 90%;
+    margin: 30px auto;
+    border-spacing: 0px;
+    line-height: 1.75rem;
+    color: white;
+}
+
+.song__header th {
+    background-color: #f67264;
+    border-top: 4px solid #bd3943;
+    width: 20%;
+}
+
+.song-display__container td {
+    width: 20%;
+    text-align: center;
+    background-color: #3f0073;
+    border-top: 3px solid #7566ad;
+    
+}
+
+.song-display__container button {
+    border: 2px solid #7566ad;
+    background-color: #b9aaee;
+    border-radius: 25px;
+    color: white;
+    padding: 5px;
+    margin: 10px 0px;
+}
+

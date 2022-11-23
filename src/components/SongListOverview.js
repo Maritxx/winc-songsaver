@@ -4,7 +4,8 @@ import SongListDisplay from "./SongListDisplay.js";
 
 function SongListOverview() {
     return (
-        <main>
+        <main className="twelveHundred">
+            <h1>Winc Lil' Liedjeslijst</h1>
             <SongListForm />
             <SongListFilter />
             <SongListDisplay />

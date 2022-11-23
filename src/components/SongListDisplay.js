@@ -20,13 +20,14 @@ function SongListDisplay() {
 
 
     return (
-        <table>
-            <thead>
-                <tr className="song__header">
+        <table className="song-display__container">
+            <thead className="song__header">
+                <tr>
                     <th className="song-row__item">Song</th>
                     <th className="song-row__item">Artist</th>
                     <th className="song-row__item">Genre</th>
                     <th className="song-row__item">Rating</th>
+                    <th className="song-row__item"></th>
                 </tr>
             </thead>
             <tbody>

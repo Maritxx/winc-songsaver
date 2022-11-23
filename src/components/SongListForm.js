@@ -29,7 +29,7 @@ function SongListForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>  
+        <form className="song-form__container" onSubmit={handleSubmit}>  
             <input 
                 name="songName"
                 value={inputs.songName}
