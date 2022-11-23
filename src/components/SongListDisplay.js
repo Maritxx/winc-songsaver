@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeSong } from "../actions/songListActions"
 
 function SongListDisplay() {
-    const songs = useSelector(state => state.songs);
+    const songs = useSelector(state => state.songs.list);
     const dispatch = useDispatch();
 
     function handleRemove(key) {
