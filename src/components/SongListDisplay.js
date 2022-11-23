@@ -3,11 +3,21 @@ import { removeSong } from "../actions/songListActions"
 
 function SongListDisplay() {
     const songs = useSelector(state => state.songs.list);
+    const genreFilter = useSelector(state => state.filter.selectedGenre);
     const dispatch = useDispatch();
 
     function handleRemove(key) {
         dispatch(removeSong(key));
     }
+
+    function getList() {
+        if (!genreFilter) {
+            return songs
+        } else {
+            return songs.filter((song) => song.songGenre === genreFilter)
+        }
+    }
+
 
     return (
         <table>
@@ -20,7 +30,7 @@ function SongListDisplay() {
                 </tr>
             </thead>
             <tbody>
-                {songs.map((song) => (
+                {getList().map((song) => (
                     <tr key={song.songId}>
                         <td>{song.songName}</td>
                         <td>{song.songArtist}</td>

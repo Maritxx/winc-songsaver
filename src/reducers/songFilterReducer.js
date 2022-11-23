@@ -1,4 +1,4 @@
-import { SET_FILTER } from "../actionTypes/actionTypes";
+import { SET_FILTER } from '../actionTypes/actionTypes';
 
 const initialState = {
     selectedGenre: ""
@@ -7,10 +7,7 @@ const initialState = {
 export const songFilterReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_FILTER:
-            return {
-                ...state,
-                selectedGenre: action.payload
-            }
+            return Object.assign({}, state, {selectedGenre: action.payload})
 
         default:
             return state  

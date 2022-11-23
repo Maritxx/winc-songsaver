@@ -9,8 +9,6 @@ export const songListReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_SONG:
             const newSongObject = {...action.payload, songId: nanoid(10)}
-            console.log("state " + state)
-
             return {
                     ...state,
                     list: [...state.list, newSongObject]

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../actions/songFilterActions";
 
 function SongListFilter() {
-    const filter = useSelector(state => state.filter);
+    const filter = useSelector(state => state.filter.selectedGenre);
     const dispatch = useDispatch();
 
     function handleSelect(event) {
