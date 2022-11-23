@@ -22,12 +22,12 @@ function SongListDisplay() {
             <tbody>
                 {songs.map((song) => (
                     <tr key={song.songId}>
-                    <td>{song.songName}</td>
-                    <td>{song.songArtist}</td>
-                    <td>{song.songGenre}</td>
-                    <td>{song.songRating}</td>
+                        <td>{song.songName}</td>
+                        <td>{song.songArtist}</td>
+                        <td>{song.songGenre}</td>
+                        <td>{song.songRating}</td>
                     <td>
-                        <button onClick={() => handleRemove(song.songId)}>Delete Song</button>
+                        <button type="button" onClick={() => handleRemove(song.songId)}>Delete Song</button>
                     </td>
                 </tr>
                 ))}

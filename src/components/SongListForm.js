@@ -24,7 +24,7 @@ function SongListForm() {
             songName: "",
             songArtist: "",
             songGenre: "",
-            songRating: ""
+            songRating: "",
         });
     }
 
